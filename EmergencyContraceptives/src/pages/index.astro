@@ -1,0 +1,268 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "@astrojs/image/components";
+import Accordion from "../components/Accordion";
+---
+
+<Layout>
+  <nav class="bg-violet-300/50 shadow-md">
+    <div
+      class="max-w-screen-lg mx-auto p-2 flex justify-between items-center h-16"
+    >
+      <a href="/" class="sm:text-4xl text-xl font-bold"
+        >EmergencyContraceptives</a
+      >
+      <div class="flex gap-3">
+        <a href="#about" class="sm:text-2xl font-bold">About</a>
+        <a href="#contraceptives" class="sm:text-2xl font-bold">ECs</a>
+        <a href="#resources" class="sm:text-2xl font-bold">Resources</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section id="quote" class="mt-5">
+      <div class="max-w-screen-lg mx-auto">
+        <div class="p-4 bg-violet-300/25 rounded-md shadow-md mx-2">
+          <h1 class="text-2xl font-bold italic">
+            Allowing women to be educated about their options for emergency
+            contraception is a matter of fundamental human rights and social
+            justice. Every woman should have the right to access accurate and
+            comprehensive information about their emergency contraception
+            options, which can prevent pregnancy after unprotected intercourse
+            or contraceptive failure.
+          </h1>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="mt-5">
+      <div class="max-w-screen-lg mx-auto">
+        <h1 class="text-3xl font-bold ml-4">About</h1>
+        <div class="mt-3 bg-violet-300/25 rounded-md shadow-md p-4 mx-2">
+          <p class="text-xl">
+            <a href="/" class="text-violet-700 drop-shadow-sm font-bold"
+              >EmergencyContraceptive's</a
+            > purpose is to provide information about emergency contraception to
+            those who may not know about it or what options are available. My goal
+            is to provide accurate, up-to-date information and resources to help
+            people make informed decisions about their sexual health. I also hope
+            to raise awareness about emergency contraception and its important role
+            in preventing unintended pregnancy.
+          </p>
+          <br />
+          <p class="text-xl">
+            Below you will find information on <a
+              href="#planb"
+              class="text-violet-700 drop-shadow-sm font-bold">Plan B</a
+            >, <a href="#ella" class="text-violet-700 drop-shadow-sm font-bold"
+              >Ella</a
+            >, and <a
+              href="#iud"
+              class="text-violet-700 drop-shadow-sm font-bold">IUDs</a
+            >
+            , including what it is, how it works, and where to find them. You will
+            also find a list of commonly asked questions and answers. In addition,
+            I have provided trusted <a
+              href="#resources"
+              class="text-violet-700 drop-shadow-sm font-bold">resources</a
+            > for you to find more information. Remember, you can always contact
+            your doctor or health provider for more information regarding your specific
+            situation.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="contraceptives" class="mt-5">
+      <div class="max-w-screen-lg mx-auto">
+        <h1 class="text-3xl font-bold ml-4">Emergency Contraceptives</h1>
+        <div class="flex justify-center gap-4 mt-3 mx-2 flex-wrap">
+          <div class="bg-violet-300/25 rounded-md p-4 w-80" id="planb">
+            <h2 class="text-3xl font-bold">Plan B</h2>
+            <Image
+              alt="Plan B"
+              src="/planb.jpg"
+              height={288}
+              width={288}
+              class="mt-2 rounded-md shadow-md"
+            />
+            <Accordion client:load question="What is it?">
+              Plan B is an emergency contraceptive pill that can be used to
+              prevent pregnancy after unprotected sex or contraceptive failure.
+            </Accordion>
+            <Accordion client:load question="How does it work?">
+              Plan B works by delaying ovulation, the release of an egg from the
+              ovary, making it difficult for sperm to fertilize the egg.
+            </Accordion>
+            <Accordion client:load question="How soon can I take it?">
+              Plan B is most effective when taken within 3 days of unprotected
+              sex.
+            </Accordion>
+            <Accordion client:load question="Are there any side effects?">
+              Common side effects of Plan B include nausea, stomach pain,
+              headaches, and changes in menstrual periods.
+            </Accordion>
+            <Accordion client:load question="Where can I get it?">
+              Plan B can be purchased over-the-counter at many pharmacies and
+              drugstores without a prescription.
+            </Accordion>
+          </div>
+          <div class="bg-violet-300/25 rounded-md p-4 w-80" id="ella">
+            <h2 class="text-3xl font-bold">Ella</h2>
+            <Image
+              alt="Ella"
+              src="/ella.jpg"
+              height={288}
+              width={288}
+              class="mt-2 rounded-md shadow-md"
+            />
+            <Accordion client:load question="What is it?">
+              Ella is a type of emergency contraceptive pill that can be used to
+              prevent pregnancy after unprotected sex or contraceptive failure.
+            </Accordion>
+            <Accordion client:load question="How does it work?">
+              Ella works by delaying ovulation, the release of an egg from the
+              ovary, making it difficult for sperm to fertilize the egg. It also
+              works by thickening the cervical mucus, making it harder for sperm
+              to reach an egg.
+            </Accordion>
+            <Accordion client:load question="How soon can I take it?">
+              Ella can be taken up to 5 days after unprotected sex, but it is
+              most effective when taken within 24 hours.
+            </Accordion>
+            <Accordion client:load question="Are there any side effects?">
+              Common side effects of Ella include nausea, headaches, and changes
+              in menstrual periods.
+            </Accordion>
+            <Accordion client:load question="Where can I get it?">
+              Ella requires a prescription and can be obtained from a healthcare
+              provider.
+            </Accordion>
+          </div>
+          <div class="bg-violet-300/25 rounded-md p-4 w-80" id="iud">
+            <h2 class="text-3xl font-bold">IUD</h2>
+            <Image
+              alt="IUD"
+              src="/iud.jpg"
+              height={288}
+              width={288}
+              class="mt-2 rounded-md shadow-md"
+            />
+            <Accordion client:load question="What is it?">
+              An IUD, or intrauterine device, is a small, T-shaped device that
+              is inserted into the uterus by a healthcare provider to prevent
+              pregnancy.
+            </Accordion>
+            <Accordion client:load question="How does it work?">
+              There are two types of IUDs available: hormonal and copper.
+              Hormonal IUDs release a small amount of progestin, which thickens
+              cervical mucus and thins the lining of the uterus. Copper IUDs
+              release copper ions, which creates an environment that is toxic to
+              sperm.
+            </Accordion>
+            <Accordion client:load question="How soon can I take it?">
+              An IUD can be inserted at any time during a person's menstrual
+              cycle, but it is most effective when inserted as soon as possible
+              after unprotected sex. The optimal time for insertion is within 5
+              days of unprotected sex.
+            </Accordion>
+            <Accordion client:load question="Are there any side effects?">
+              Common side effects of using an IUD include cramping, spotting,
+              and changes in menstrual periods.
+            </Accordion>
+            <Accordion client:load question="Where can I get it?">
+              An IUD is inserted into the uterus by a healthcare provider during
+              a pelvic exam. The procedure is typically quick and relatively
+              painless.
+            </Accordion>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="resources" class="mt-5">
+      <div class="max-w-screen-lg mx-auto">
+        <h1 class="text-3xl font-bold ml-4">Resources</h1>
+        <div class="mt-3 bg-violet-300/25 rounded-md shadow-md p-4 mx-2">
+          <p class="text-xl">
+            If you didn't find what you were looking for, I compiled a list of
+            trusted resources to help you find what you need. Remember you can
+            always contact your doctor or health provider for more information
+            regarding your specific situation.
+          </p>
+          <ul class="list-disc ml-5 mt-3">
+            <li>
+              <a
+                href="https://www.plannedparenthood.org"
+                class="text-violet-700 font-bold text-xl drop-shadow-sm"
+                >Planned Parenthood</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.mayoclinic.org"
+                class="text-violet-700 font-bold text-xl drop-shadow-sm"
+                >Mayo Clinic</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://my.clevelandclinic.org"
+                class="text-violet-700 font-bold text-xl drop-shadow-sm"
+                >Cleveland Clinic</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.cdc.gov"
+                class="text-violet-700 font-bold text-xl drop-shadow-sm">CDC</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.womenshealth.gov"
+                class="text-violet-700 font-bold text-xl drop-shadow-sm"
+                >Office on Women's Health</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="resources" class="mt-5">
+      <div class="max-w-screen-lg mx-auto">
+        <h1 class="text-3xl font-bold ml-4">Citations</h1>
+        <div class="mt-3 bg-violet-300/25 rounded-md shadow-md p-4 mx-2">
+          <ul class="list-disc ml-5 mt-3">
+            <li>
+              <a
+                href="https://www.plannedparenthood.org/learn/morning-after-pill-emergency-contraception/whats-plan-b-morning-after-pill"
+                >https://www.plannedparenthood.org/learn/morning-after-pill-emergency-contraception/whats-plan-b-morning-after-pill</a
+              >
+            </li>
+            <li>
+              <a href="https://www.planbonestep.com/"
+                >https://www.planbonestep.com/
+              </a>
+            </li>
+            <li>
+              <a href="https://www.ella-now.com/">https://www.ella-now.com/</a>
+            </li>
+            <li>
+              <a
+                href="https://www.webmd.com/drugs/2/drug-154978/ella-oral/details"
+                >https://www.webmd.com/drugs/2/drug-154978/ella-oral/details</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.plannedparenthood.org/learn/birth-control/iud"
+                >https://www.plannedparenthood.org/learn/birth-control/iud</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-violet-300 h-24 mt-16 flex justify-center items-center shadow-md">
+      <h1 class="text-2xl font-bold">Created By Stephen Shkeda 2023</h1>
+    </footer>
+  </main>
+</Layout>
